@@ -10,8 +10,8 @@ on:
     #  - 'datahub-graphql-core/**'   
 jobs:
   set-working-directory:
-    working-directory: ./datahub-frontend
     steps:
+      working-directory: ./datahub-frontend
       - run: ls
   datahub-fronend:
     if: github.ref_name == 'test'
