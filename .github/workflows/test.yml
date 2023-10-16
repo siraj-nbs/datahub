@@ -7,9 +7,7 @@ on:
       - develop
     paths:
       - 'datahub-frontend/**'
-      - 'datahub-graphql-core/**'
-      - '**.js'
-    
+      - 'datahub-graphql-core/**'   
 jobs:
   datahub-fronend:
     if: github.ref_name == 'test'
