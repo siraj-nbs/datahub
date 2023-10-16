@@ -11,8 +11,8 @@ on:
 jobs:
   set-working-directory:
     runs-on: ubuntu-latest
-    working-directory: ./datahub-frontend
     steps:
+      working-directory: ./datahub-frontend
       - run: ls
   datahub-fronend:
     if: github.ref_name == 'test'
