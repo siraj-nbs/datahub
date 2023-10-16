@@ -15,7 +15,7 @@ jobs:
     if: github.ref_name == 'test'
     runs-on: ubuntu-latest
     steps:
-      run: echo "The operating system on the runner is $env:RUNNER_OS."
+      - run: echo "The operating system on the runner is $env:RUNNER_OS."
       - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event and by ${{ github.actor }} with id ${{ github.actor_id }}"
       - run: echo "${{ github.actor }} is testing out GitHub Actions"
       - run: echo "🐧 This job is now running on a ${{ runner.os }} server hosted by GitHub!"
