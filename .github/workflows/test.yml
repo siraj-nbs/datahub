@@ -12,6 +12,10 @@ jobs:
   set-working-directory:
     runs-on: ubuntu-latest
     steps:
+      - name: working directory
+        run: pwd
+      - name: files list
+        run: ls
       - name: Clean temp directory
         working-directory: datahub-frontend
         run: ls
