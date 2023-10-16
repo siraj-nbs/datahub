@@ -9,6 +9,9 @@ on:
       - 'datahub-frontend/**'
       - 'datahub-graphql-core/**'   
 jobs:
+  set-working-directory:
+    working-directory: ./datahub-frontend
+      - run: ls
   datahub-fronend:
     if: github.ref_name == 'test'
     runs-on: ubuntu-latest
