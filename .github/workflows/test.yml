@@ -5,9 +5,9 @@ on:
     branches:
       - test
       - develop
-    paths:
-      - 'datahub-frontend/**'
-      - 'datahub-graphql-core/**'   
+    #paths:
+    #  - 'datahub-frontend/**'
+    #  - 'datahub-graphql-core/**'   
 jobs:
   set-working-directory:
     working-directory: ./datahub-frontend
