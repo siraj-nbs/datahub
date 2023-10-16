@@ -5,9 +5,9 @@ on:
     branches:
       - test
       - develop
-    #paths:
-    #  - 'datahub-frontend/**'
-    #  - 'datahub-graphql-core/**'   
+    paths:
+      - 'datahub-frontend/**'
+      - 'datahub-graphql-core/**'   
 jobs:
   set-working-directory:
     runs-on: ubuntu-latest
@@ -16,6 +16,18 @@ jobs:
         run: pwd
       - name: files list
         run: ls
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # OR "2" -> To retrieve the preceding commit.
+      - name: Get changed files
+        id: changed-files
+        uses: tj-actions/changed-files@v39
+      - name: List all changed files
+        run: |
+          for file in ${{ steps.changed-files.outputs.all_changed_files }}; do
+            echo "$file was changed"
+          done
+      
       # - name: Clean temp directory
       #   working-directory: datahub-frontend
       #   run: ls
