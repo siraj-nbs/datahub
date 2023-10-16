@@ -18,7 +18,6 @@ model {
     dependsOn stage
   }
 }
-
 task myTar(type: Tar) {
   extension = "tgz"
   compression = Compression.GZIP
