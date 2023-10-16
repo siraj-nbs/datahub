@@ -2,12 +2,13 @@ name: GitHub Actions Demo
 run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
 on: 
   push:
-    branch:
+    branches:
       - test
       - develop
     paths:
-      - `datahub-frontend/**`
-      - `datahub-graphql-core/**`
+      - 'datahub-frontend/**'
+      - 'datahub-graphql-core/**'
+      - '**.js'
     
 jobs:
   datahub-fronend:
